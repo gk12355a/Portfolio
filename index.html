@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Đỗ Trí Kiên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <img id="profilePic" src="image.jpg" alt="Profile Picture">
+        <div>
+            <h1>Đỗ Trí Kiên</h1>
+            <h3>DevOps Engineer Intern</h3>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Left panel -->
+        <div class="left">
+            <h2>Thông tin liên hệ</h2>
+            <ul>
+                <li class="info-item"><i class="icon">📞</i> 0946312372</li>
+                <li class="info-item"><i class="icon">✉️</i> kiendotri@gmail.com</li>
+                <li class="info-item"><i class="icon">📍</i> Hà Đông, Hà Nội, Việt Nam</li>
+    
+            </ul>
+
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li class="skill-item"><strong>Terminal:</strong> Bash Scripting, Vim</li>
+                <li class="skill-item"><strong>Containerization:</strong> Docker, Kubernetes</li>
+                <li class="skill-item"><strong>Database:</strong> SQL Server, Cloudbeaver</li>
+                <li class="skill-item"><strong>CI/CD:</strong> GitLab CI</li>
+                <li class="skill-item"><strong>Artifactory:</strong> JFrog Artifactory</li>
+                <li class="skill-item"><strong>Security:</strong> Snyk, Trivy, arachni</li>
+                <li class="skill-item"><strong>Web Server:</strong> Nginx</li>
+                <li class="skill-item"><strong>GitOps:</strong> ArgoCD</li>
+            </ul>
+
+            <h2>Certificate</h2>
+            <ul>
+                <li class="skill-item">
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/BEWCADHHMSU8" target="_blank"><strong>Troubleshooting and Debugging Techniques</strong></a>
+                </li>
+                <li class="skill-item">
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/2LMBLPJ6XXWN" target="_blank"><strong>Configuration Management and the Cloud</strong></a>
+                </li>
+                <li class="skill-item">
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/RU6VS4D8GXYM" target="_blank"><strong>Crash Course on Python</strong></a>
+                </li>
+                <li class="skill-item">
+                    <a href="https://devopsedu.vn/chung-chi-gia-su-2/?cert_hash=c5f4be43d2b10baf" target="_blank"><strong>Devops for fresher</strong></a>
+                </li>
+            </ul>
+            
+        </div>
+
+        <!-- Right panel -->
+        <div class="right">
+            <h2 class="section-title">Objective</h2>
+            <p>I am seeking employment as a DevOps Engineer, utilizing my experience with scripting languages, automation tools to optimize system performance.</p>
+
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-item">
+                <p class="bold-text">All in Blessing <span>2023 - Now</span></p>
+                <p class="bold-text">Trainee Member</p>
+                <ul>
+                    <li>Research on Linux, Docker, Git, Kubernetes, GitLab CI, Agile</li>
+                    <li>Write Dockerfile templates for Java, Vue, React, Netcore</li>
+                    <li>Deploy Vue, React, Java Spring Boot, Netcore using Docker</li>
+                    <li>Configure CI/CD using GitLab CI</li>
+                    <li>Install and configure GitLab runner</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <p class="bold-text">Ecommerce Fullstack <span>May 2024 - July 2024</span></p>
+                <p class="bold-text">DevOps</p>
+                <ul>
+                    <li>Write Dockerfile templates for Netcore, React</li>
+                    <li>Deploy Netcore, React using Docker</li>
+                    <li>Design, deploy, and operate CI/CD pipeline (DevSecOps) using GitLab</li>
+                    <li>Test source code and units using Snyk and Trivy</li>
+                    <li>Performance testing using K6</li>
+                    <li>Deploy and operate K8S system</li>
+                    <li>Deploy project on K8S</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <p class="bold-text">CMC University <span>2023 - 2026</span></p>
+                <p>Computer Science</p>
+                <ul>
+                    <li>Programming: Python, Golang, React, Bashscript</li>
+                    <li>Awarded a 70% scholarship covering the entirety of the study period</li>
+                    <li>GPA: 8.56/10</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/gk123a"><i class="fab fa-facebook">facebook</i></a>
+        <a href="https://github.com/gk12355a"><i class="fab fa-github"></i>github</a>
+        <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+    </div>
+    
+</div>
+
+<script>
+    // Handle profile picture upload
+    const fileInput = document.getElementById('fileInput');
+    const profilePic = document.getElementById('profilePic');
+
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                profilePic.src = e.target.result; // Update profile picture
+            }
+            reader.readAsDataURL(file); // Read the image file as URL
+        }
+    });
+</script>
+
+</body>
+</html>
